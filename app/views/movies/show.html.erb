@@ -1,0 +1,12 @@
+<%= render 'layouts/nav' %>
+
+<h1>Show</h1>
+
+  <h1><%= @movie.title %></h1>
+  <span><%= @movie.year %></span><br>
+  <br><p><%= @movie.description %></p>
+  <h3><%= @movie.director %></h3>
+
+  <%= link_to 'Back', root_path %>
+  <%= link_to 'Edit', edit_movie_path(@movie) %>
+  <%= link_to 'Delete', movie_path(@movie), method: :delete, data: {confirm: "Confirm Deletion"} %>
